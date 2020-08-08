@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Galleri - Snaustrinda spelemannslag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="script/header.js"></script>
+
+    <h1 id="gallery-headline">Galleri</h1>
+    <!-- Selve bildene: -->
+    <div id="gallery">
+
+        <!--Til den det måtte angå: Denne delen er basert på eksemplene Slideshow og Modal Images funnet på siden
+        https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+
+        <div class="image" tabindex="0">
+            <img src="bilder/galleri/lowres/bilde1lowres.jpg" alt="Snaustrinda spelemannslag på Røros." onclick="openModal(0);showSlide(0)">
+        </div>
+
+        <div class="image">
+            <img src="bilder/galleri/lowres/bilde2lowres.jpg" alt="Tre medlemmer av Snaustrinda spiller fele." onclick="openModal(1);showSlide(1)">
+        </div>
+
+        <div class="image">
+            <img src="bilder/galleri/lowres/bilde3lowres.jpg" alt="Snaustrinda spelemannslag har fest på kaffestuggu." onclick="openModal(2);showSlide(2)">
+        </div>
+
+        <div class="image">
+            <img src="bilder/galleri/lowres/bilde4lowres.jpg" alt="Tre medlemmer spiller trekkspill, fele og klarinett." onclick="openModal(3);showSlide(3)">
+        </div>
+    </div>
+
+    <!-- Visningsboksen: -->
+
+    <div id="modal">
+
+        <!-- Innholdet/bildene: -->
+
+        <div id="modal-content">
+
+            <div class="modal-image">
+                <img src="bilder/galleri/highres/bilde1highres.jpg" alt="Snaustrinda spelemannslag på Røros.">
+            </div>
+
+            <div class="modal-image">
+                <img src="bilder/galleri/highres/bilde2highres.jpg" alt="Tre medlemmer av Snaustrinda spiller fele.">
+            </div>
+
+            <div class="modal-image">
+                <img src="bilder/galleri/highres/bilde3highres.jpg" alt="Snaustrinda spelemannslag har fest på kaffestuggu.">
+            </div>
+
+            <div class="modal-image">
+                <img src="bilder/galleri/highres/bilde4highres.jpg" alt="Tre medlemmer spiller trekkspill, fele og klarinett.">
+            </div>
+
+            <!-- Forrige/neste-knapper: -->
+
+            <div id="prev-galleri" onclick="nextSlide(-1)">&#10094;</div>
+            <div id="next-galleri" onclick="nextSlide(1)">&#10095;</div>
+
+        </div>
+
+        <!-- Kryss-ut-knapp: -->
+        <div id="close-galleri" onclick="closeModal()">&times;</div>
+    </div>
+
+    <script src="script/navbar.js"></script>
+    <script src="script/footer.js"></script>
+    <script src="script/galleri.js"></script>
+</body>
+
+</html>

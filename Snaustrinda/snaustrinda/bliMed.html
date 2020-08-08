@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bli med - Snaustrinda spelemannslag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="script/header.js"></script>
+
+    <div id="bliMed" class="innhold">
+        <h1>Bli med</h1>
+        <h2>Vil du bli med i verdens kuleste spelemannslag? </h2>
+        <p> Da er Snaustrinda noe for deg!</p>
+        <p>
+            Vi spiller konserter for folk og har et fantastisk sosialt miljø. Bli kjente med våre sprudlende medlemmer,
+            og utfordre deg selv i kunsten av å spille et instrument.
+        </p>
+        <p>Vi har kontinuerlig opptak av nye medlemmer. For å søke opptak bør man være en habil kakebaker og gjerne beherske et mer eller mindre passende instrument. Snaustrinda øver på Låfte hver torsdag klokka 19:00 til 21:00.</p>
+        <p>Fyll ut skjemaet under og send oss en melding!</p>
+    </div>
+
+    <form class="forms" onsubmit="return klikketBliMed()" method="post" action="bliMed.php">
+        <div class="divForms">
+            <h2>Skjema</h2>
+            <label for="navnInput">Fult navn</label><br>
+            <input type="text" name="navn" id="navnInput" pattern="^[A-ZÆØÅa-zæøå][A-ZÆØÅa-zæøå\s]*$" onkeydown="return event.key != 'Enter';" required><br>
+            <label for="emailInput">E-post</label><br>
+            <input type="text" name="epost" id="emailInput" onkeydown="return event.key != 'Enter';" required><br>
+            <label for="telefonInput">Telefon (valgfritt)</label><br>
+            <input type="text" name="telefon" id="telefonInput" minlength="8" maxlength="8" size="8" pattern="[0-9]+" onkeydown="return event.key != 'Enter';"><br>
+            <label for="meldingInput">
+                Fortell kort om deg selv, hvorfor du søker, om du spiller et instrument ol.</label><br>
+            <textarea name="melding" id="meldingInput" rows="8" cols="80" required></textarea><br>
+            <input type="submit" name="submit" value="Send inn skjema">
+        </div>
+    </form>
+
+    <script src="script/button.js"></script>
+    <script src="script/navbar.js"></script>
+    <script src="script/footer.js"></script>
+</body>
+
+</html>

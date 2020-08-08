@@ -310,6 +310,7 @@ h1 {
 #video {
   margin: auto;
   margin-top: 20px;
+  text-align: center;
 }
 video{
   cursor: pointer;

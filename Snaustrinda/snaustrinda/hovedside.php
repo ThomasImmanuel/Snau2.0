@@ -1,13 +1,12 @@
 <?php
 
-
 if (isset($_POST['submit'])) {
-  $name = $_POST['navn'];
+
   $mailFrom = $_POST['epost'];
-  $phone = $_POST['telefon'];
+
   $message = $_POST['melding'];
 
-  $subject = "Jeg vil bli med!";
+  $subject = "Booking";
 
   $mailTo = "thomas@thomasimmanuel.no";
 
@@ -17,13 +16,13 @@ if (isset($_POST['submit'])) {
   $header.= "X-Priority: 1\r\n";
 
 
-  $txt = "Du har mottatt en mail fra ".$name."\n\nTelefon: ".$phone."\n\nMelding: ".$message;
+  $txt = "Du har mottatt en mail fra ".$name."\n\nMelding: ".$message;
 
 
   if (mail($mailTo, $subject, $txt, $header)) {
-    echo "Meldingen er sendt!";
+      echo "Bra!";
   };
-  header("Location: bliMed.html?mailsend");
+  header("Location: hovedside.html?mailsend");
 }
 
 ?>

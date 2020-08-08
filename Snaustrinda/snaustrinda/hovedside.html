@@ -51,11 +51,10 @@
 
       <section id="video">
         <h1>Vi spiller konserter!</h1>
-        <video controls poster="bilder/video-poster.jpg" height="430">
-          <source src="video/kveldens-forste.m4v" type="video/mp4">
-        </video>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wn2PYC2VCyo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <img class="scrollbtn" src='bilder/buttons/pil.png' alt='Scroll ned pil' onclick="scrollDown('#se_på_oss', 1000);">
       </section>
+
 
       <section id="se_på_oss">
         <div>
@@ -102,14 +101,14 @@
     </div>
 
     <section id='kontaktskjema'>
-    <form class="forms" id="booking" onsubmit="return klikketHovedside()">
+    <form class="forms" id="booking" action="hovedside.php" method="post">
       <div class="divForms">
         <h1>Booking / spørsmål til oss</h1>
         <label for="hovedsideNavnInput">Din e-post</label><br>
-        <input type="email" name="epost" id="hovedsideNavnInput" onkeydown="return event.key != 'Enter';" required><br>
+        <input type="text" name="epost" id="hovedsideNavnInput" onkeydown="return event.key != 'Enter';" required><br>
         <label for="hovedsideMeldingInput">Når vil du booke oss? / hva lurer du på?</label><br>
         <textarea name="melding" id="hovedsideMeldingInput" rows="8" cols="80" required></textarea><br>
-        <input type="submit" value="Send melding">
+        <input type="submit" name="submit" value="Send melding">
       </div>
     </form>
     <script src="script/footer.js"></script>

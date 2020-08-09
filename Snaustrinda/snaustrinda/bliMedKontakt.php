@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
 
   $subject = "Booking";
 
-  $mailTo = "thomasivw@hotmail.com";
+  $mailTo = "snaustrinda-sjef@samfundet.no";
 
   $header = "From: User <".$mailFrom.">\r\n";
   $header.= "MIME-Version: 1.0\r\n";

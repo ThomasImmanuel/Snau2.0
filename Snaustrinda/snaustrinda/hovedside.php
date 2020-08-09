@@ -8,20 +8,19 @@ if (isset($_POST['submit'])) {
 
   $subject = "Booking";
 
-  $mailTo = "thomas@thomasimmanuel.no";
+  $mailTo = "snaustrinda-sjef@samfundet.no";
 
   $header = "From: ".$mailFrom."\r\n";
   $header.= "MIME-Version: 1.0\r\n";
   $header.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
   $header.= "X-Priority: 1\r\n";
+  $header.= "Reply-to: ".$mailFrom."\r\n";
 
 
   $txt = "Du har mottatt en mail fra ".$name."\n\nMelding: ".$message;
 
 
-  if (mail($mailTo, $subject, $txt, $header)) {
-      echo "Bra!";
-  };
+  mail($mailTo, $subject, $txt, $header);
   header("Location: hovedside.html?mailsend");
 }
 
